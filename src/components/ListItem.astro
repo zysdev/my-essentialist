@@ -11,7 +11,7 @@ const { title, desc, url } = Astro.props;
 <p class="w-full flex justify-start items-start text-base">
   {
     url ? (
-      <a href={url} target="_blank" class="group focus-visible:bg-l/primary dark:focus-visible:bg-d/primary focus-visible:text-l/primary dark:focus-visible:text-d/primary outline-none focus-visible:after:text-l/primary dark:focus-visible:after:text-d/primary 
+      <a href={url} target={url == "#" ? "_self" : "_blank"} class="group focus-visible:bg-l/primary dark:focus-visible:bg-d/primary focus-visible:text-l/primary dark:focus-visible:text-d/primary outline-none focus-visible:after:text-l/primary dark:focus-visible:after:text-d/primary 
       hover:bg-l/primary dark:hover:bg-d/primary hover:text-l/primary dark:hover:text-d/primary hover:after:text-l/primary dark:hover:after:text-d/primary">
         <span class=
         "text-l/secondary dark:text-d/secondary group-focus-visible:text-d/primary dark:group-focus-visible:text-l/primary
